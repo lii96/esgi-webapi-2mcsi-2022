@@ -30,3 +30,7 @@ N/A.
 - [ ] Code de statut de réponse
 - [ ] Méthodes HTTP
 - [ ] Routeur
+- [ ] Contrôleur
+- [ ] Modèle
+- [ ] PHP Data Object
+- [ ] Authentification
