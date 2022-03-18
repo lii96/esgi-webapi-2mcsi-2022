@@ -2,11 +2,11 @@
 
 ## Séances
 
-- [] Séance 1
-- [] Séance 2
-- [] Séance 3
-- [] Séance 4
-- [] Séance 5
+- [ ] Séance 1
+- [ ] Séance 2
+- [ ] Séance 3
+- [ ] Séance 4
+- [ ] Séance 5
 
 ## Contrôles Continus
 
