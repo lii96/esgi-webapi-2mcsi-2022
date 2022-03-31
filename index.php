@@ -1,14 +1,31 @@
 <?php
 
 /**
+ * Affiche les erreurs même lorsqu'elles sont masquées
+ * @see https://www.php.net/manual/en/function.ini-set.php
+ * @see https://www.php.net/manual/en/ini.list.php
+ */
+ini_set("display_errors", 1);
+
+/**
+ * Affiche les avertissements et les informations comme des erreurs
+ * @see https://www.php.net/manual/en/function.error-reporting.php
+ * @see https://www.php.net/manual/en/errorfunc.constants.php
+ */
+error_reporting(E_ALL);
+
+/**
  * Route correspondant à un fichier ou dossier qui n'existe pas
  * @see https://www.php.net/manual/en/reserved.variables.request.php
  */
-$route = $_REQUEST["route"];
+$route = $_REQUEST["route"] ?? "home";
 
+/**
+ * Récupère la méthode HTTP utilisé par le client
+ * @see https://www.php.net/manual/en/reserved.variables.server.php
+ */
 $method = $_SERVER["REQUEST_METHOD"];
 
-// Si la route est "users"
 if ($route === "users") {
     if ($method === "GET") {
         /**
@@ -17,7 +34,10 @@ if ($route === "users") {
          */
         include __DIR__ . "/controllers/users/get.php";
 
-        // Arrête le script à cet endroit
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
         die();
     }
 
@@ -28,7 +48,10 @@ if ($route === "users") {
          */
         include __DIR__ . "/controllers/users/post.php";
 
-        // Arrête le script à cet endroit
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
         die();
     }
 
@@ -39,7 +62,10 @@ if ($route === "users") {
          */
         include __DIR__ . "/controllers/users/patch.php";
 
-        // Arrête le script à cet endroit
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
         die();
     }
 
@@ -50,85 +76,304 @@ if ($route === "users") {
          */
         include __DIR__ . "/controllers/users/delete.php";
 
-        // Arrête le script à cet endroit
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
         die();
     }
 }
 
-// Si la route est "comments"
 if ($route === "comments") {
-    /**
-     * Importe le contenu du fichier "controllers/comments.php"
-     * @see https://www.php.net/manual/en/function.include.php
-     */
-    include __DIR__ . "/controllers/comments.php";
+    if ($method === "GET") {
+        /**
+         * Importe le contenu du fichier "controllers/comments/get.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/comments/get.php";
 
-    /**
-     * Arrête l'exécution du script
-     * @see https://www.php.net/manual/en/function.die.php
-     */
-    die();
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "POST") {
+        /**
+         * Importe le contenu du fichier "controllers/comments/post.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/comments/post.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "PATCH") {
+        /**
+         * Importe le contenu du fichier "controllers/comments/patch.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/comments/patch.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "DELETE") {
+        /**
+         * Importe le contenu du fichier "controllers/comments/delete.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/comments/delete.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
 }
 
-// Si la route est "albums"
 if ($route === "albums") {
-    /**
-     * Importe le contenu du fichier "controllers/albums.php"
-     * @see https://www.php.net/manual/en/function.include.php
-     */
-    include __DIR__ . "/controllers/albums.php";
+    if ($method === "GET") {
+        /**
+         * Importe le contenu du fichier "controllers/albums/get.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/albums/get.php";
 
-    /**
-     * Arrête l'exécution du script
-     * @see https://www.php.net/manual/en/function.die.php
-     */
-    die();
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "POST") {
+        /**
+         * Importe le contenu du fichier "controllers/albums/post.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/albums/post.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "PATCH") {
+        /**
+         * Importe le contenu du fichier "controllers/albums/patch.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/albums/patch.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "DELETE") {
+        /**
+         * Importe le contenu du fichier "controllers/albums/delete.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/albums/delete.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
 }
 
-// Si la route est "todos"
 if ($route === "todos") {
-    /**
-     * Importe le contenu du fichier "controllers/todos.php"
-     * @see https://www.php.net/manual/en/function.include.php
-     */
-    include __DIR__ . "/controllers/todos.php";
+    if ($method === "GET") {
+        /**
+         * Importe le contenu du fichier "controllers/todos/get.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/todos/get.php";
 
-    /**
-     * Arrête l'exécution du script
-     * @see https://www.php.net/manual/en/function.die.php
-     */
-    die();
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "POST") {
+        /**
+         * Importe le contenu du fichier "controllers/todos/post.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/todos/post.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "PATCH") {
+        /**
+         * Importe le contenu du fichier "controllers/todos/patch.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/todos/patch.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "DELETE") {
+        /**
+         * Importe le contenu du fichier "controllers/todos/delete.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/todos/delete.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
 }
 
-// Si la route est "posts"
 if ($route === "posts") {
-    /**
-     * Importe le contenu du fichier "controllers/posts.php"
-     * @see https://www.php.net/manual/en/function.include.php
-     */
-    include __DIR__ . "/controllers/posts.php";
+    if ($method === "GET") {
+        /**
+         * Importe le contenu du fichier "controllers/posts/get.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/posts/get.php";
 
-    /**
-     * Arrête l'exécution du script
-     * @see https://www.php.net/manual/en/function.die.php
-     */
-    die();
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "POST") {
+        /**
+         * Importe le contenu du fichier "controllers/posts/post.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/posts/post.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "PATCH") {
+        /**
+         * Importe le contenu du fichier "controllers/posts/patch.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/posts/patch.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "DELETE") {
+        /**
+         * Importe le contenu du fichier "controllers/posts/delete.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/posts/delete.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
 }
 
-// Si la route est "photos"
 if ($route === "photos") {
-    /**
-     * Importe le contenu du fichier "controllers/photos.php"
-     * @see https://www.php.net/manual/en/function.include.php
-     */
-    include __DIR__ . "/controllers/photos.php";
+    if ($method === "GET") {
+        /**
+         * Importe le contenu du fichier "controllers/photos/get.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/photos/get.php";
 
-    /**
-     * Arrête l'exécution du script
-     * @see https://www.php.net/manual/en/function.die.php
-     */
-    die();
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "POST") {
+        /**
+         * Importe le contenu du fichier "controllers/photos/post.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/photos/post.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "PATCH") {
+        /**
+         * Importe le contenu du fichier "controllers/photos/patch.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/photos/patch.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
+
+    if ($method === "DELETE") {
+        /**
+         * Importe le contenu du fichier "controllers/photos/delete.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/photos/delete.php";
+
+        /**
+         * Arrête l'exécution du script
+         * @see https://www.php.net/manual/en/function.die.php
+         */
+        die();
+    }
 }
 
-// Si aucun fichier ou dossier ne nous convient
-echo "Not found";
+include __DIR__ . "/functions/json-response.php";
+
+jsonResponse(404, [], ["success" => false, "error" => "Not found"]);

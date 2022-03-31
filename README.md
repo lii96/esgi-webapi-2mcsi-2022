@@ -31,6 +31,10 @@ git pull
 
 N/A.
 
+## Travail
+
+Utiliser la fonction `jsonResponse` dans tous les controlleurs.
+
 ## Todo
 
 - [X] Installation [WAMP](https://www.wampserver.com/en/download-wampserver-64bits/), [XAMPP](https://www.apachefriends.org/download.html), [MAMP](https://www.mamp.info/en/windows/)
