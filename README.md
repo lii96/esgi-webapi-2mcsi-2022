@@ -3,7 +3,7 @@
 ## Séances
 
 - [X] Séance 1 18/03/2022
-- [ ] Séance 2 31/03/2022
+- [X] Séance 2 31/03/2022
 - [ ] Séance 3
 - [ ] Séance 4
 - [ ] Séance 5
@@ -13,6 +13,13 @@
 ```bash
 git clone https://github.com/aminnairi/esgi-webapi-2mcsi-2022/ /opt/lampp/htdocs/esgi-webapi-2mcsi-2022
 cd /opt/lampp/htdocs/esgi-webapi-2mcsi-2022
+```
+
+## Mise-à-jour
+
+```bash
+cd /opt/lampp/htdocs/esgi-webapi-2mcsi-2022
+git pull
 ```
 
 ## Contrôles Continus
@@ -27,17 +34,17 @@ N/A.
 ## Todo
 
 - [X] Installation [WAMP](https://www.wampserver.com/en/download-wampserver-64bits/), [XAMPP](https://www.apachefriends.org/download.html), [MAMP](https://www.mamp.info/en/windows/)
-- [ ] Installation du dépôt
-- [ ] Hello, world!
-- [ ] Requête
-- [ ] En-tête de requête
-- [ ] Réponse
-- [ ] Corps de réponse
-- [ ] En-tête de réponse
-- [ ] Code de statut de réponse
-- [ ] Méthodes HTTP
-- [ ] Routeur
-- [ ] Contrôleur
+- [X] Installation du dépôt
+- [X] Hello, world!
+- [X] Requête
+- [X] En-tête de requête
+- [X] Réponse
+- [X] Corps de réponse
+- [X] En-tête de réponse
+- [X] Code de statut de réponse
+- [X] Méthodes HTTP
+- [X] Routeur
+- [X] Contrôleur
 - [ ] Modèle
 - [ ] PHP Data Object
 - [ ] Authentification
