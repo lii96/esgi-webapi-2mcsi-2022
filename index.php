@@ -6,15 +6,53 @@
  */
 $route = $_REQUEST["route"];
 
+$method = $_SERVER["REQUEST_METHOD"];
+
 // Si la route est "users"
 if ($route === "users") {
-    /**
-     * Importe le contenu du fichier "controllers/users.php"
-     * @see https://www.php.net/manual/en/function.include.php
-     */
-    include __DIR__ . "/controllers/users.php";
-    // Arrête le script à cet endroit
-    die();
+    if ($method === "GET") {
+        /**
+         * Importe le contenu du fichier "controllers/users/get.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/users/get.php";
+
+        // Arrête le script à cet endroit
+        die();
+    }
+
+    if ($method === "POST") {
+        /**
+         * Importe le contenu du fichier "controllers/users/post.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/users/post.php";
+
+        // Arrête le script à cet endroit
+        die();
+    }
+
+    if ($method === "PATCH") {
+        /**
+         * Importe le contenu du fichier "controllers/users/patch.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/users/patch.php";
+
+        // Arrête le script à cet endroit
+        die();
+    }
+
+    if ($method === "DELETE") {
+        /**
+         * Importe le contenu du fichier "controllers/users/delete.php"
+         * @see https://www.php.net/manual/en/function.include.php
+         */
+        include __DIR__ . "/controllers/users/delete.php";
+
+        // Arrête le script à cet endroit
+        die();
+    }
 }
 
 // Si la route est "comments"
