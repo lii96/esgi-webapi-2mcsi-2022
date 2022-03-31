@@ -2,11 +2,18 @@
 
 ## Séances
 
-- [ ] Séance 1
-- [ ] Séance 2
+- [X] Séance 1 18/03/2022
+- [ ] Séance 2 31/03/2022
 - [ ] Séance 3
 - [ ] Séance 4
 - [ ] Séance 5
+
+## Installation
+
+```bash
+git clone https://github.com/aminnairi/esgi-webapi-2mcsi-2022/ /opt/lampp/htdocs/esgi-webapi-2mcsi-2022
+cd /opt/lampp/htdocs/esgi-webapi-2mcsi-2022
+```
 
 ## Contrôles Continus
 
@@ -19,7 +26,7 @@ N/A.
 
 ## Todo
 
-- [ ] Installation [WAMP](https://www.wampserver.com/en/download-wampserver-64bits/), [XAMPP](https://www.apachefriends.org/download.html), [MAMP](https://www.mamp.info/en/windows/)
+- [X] Installation [WAMP](https://www.wampserver.com/en/download-wampserver-64bits/), [XAMPP](https://www.apachefriends.org/download.html), [MAMP](https://www.mamp.info/en/windows/)
 - [ ] Installation du dépôt
 - [ ] Hello, world!
 - [ ] Requête
