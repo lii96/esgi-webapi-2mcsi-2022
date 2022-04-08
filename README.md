@@ -4,9 +4,13 @@
 
 - [X] Séance 1 18/03/2022
 - [X] Séance 2 31/03/2022
-- [ ] Séance 3
+- [X] Séance 3 08/04/2022
 - [ ] Séance 4
 - [ ] Séance 5
+
+## Contrôles continus
+
+- [ ] 15/04/2022
 
 ## Installation
 
