@@ -18,7 +18,7 @@ error_reporting(E_ALL);
  * Route correspondant à un fichier ou dossier qui n'existe pas
  * @see https://www.php.net/manual/en/reserved.variables.request.php
  */
-$route = $_REQUEST["route"] ?? "home";
+$route = $_REQUEST["route"] ?? "undefined";
 
 /**
  * Récupère la méthode HTTP utilisé par le client
