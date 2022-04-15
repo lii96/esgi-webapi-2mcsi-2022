@@ -1,5 +1,7 @@
 # esgi-webapi-2mcsi-2022
 
+Hello
+
 ## Séances
 
 - [X] Séance 1 18/03/2022
